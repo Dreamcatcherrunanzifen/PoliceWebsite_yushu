@@ -20,7 +20,7 @@
             <column name="article_content" length="65535" not-null="true" />
         </property>
         <property name="articleAuthor" type="java.lang.String">
-            <column name="article_author" length="100" />
+            <column name="article_author" length="100" not-null="true" />
         </property>
         <property name="publishTime" type="java.sql.Timestamp">
             <column name="publish_time" length="19" not-null="true" />

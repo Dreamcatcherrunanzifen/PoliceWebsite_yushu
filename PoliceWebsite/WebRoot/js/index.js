@@ -20,28 +20,18 @@
 	  $("#mainPanle").css("width",width+"px");
 });
 var _menus = {"menus":[
-						{"menuid":"1","icon":"icon-sys","menuname":"警务动态管理",
+						{"menuid":"1","icon":"icon-sys","menuname":"发表文章管理",
 							"menus":[
-									{"menuid":"11","menuname":"添加警务动态","icon":"icon-add","url":"school_add.action"},
-									{"menuid":"12","menuname":"现有警务动态","icon":"icon-nav","url":"school_list.action"}
+									{"menuid":"11","menuname":"添加文章","icon":"icon-add","url":"getaddPanel.action"},
+									{"menuid":"12","menuname":"现有文章","icon":"icon-nav","url":"listArticle.action"}
 									]
 						},
 						
-						{"menuid":"3","icon":"icon-sys","menuname":"教师管理",
+						{"menuid":"2","icon":"icon-sys","menuname":"图片中心管理",
 							"menus":[
-							        {"menuid":"21","menuname":"未审核列表","icon":"icon-nav","url":"publisher_undisposedList.action"},
-									{"menuid":"22","menuname":"已审核列表","icon":"icon-nav","url":"publisher_allList.action"}]
-						},
-						{"menuid":"4","icon":"icon-sys","menuname":"课程管理",
-							"menus":[
-							        {"menuid":"21","menuname":"添加课程","icon":"icon-add","url":"course_add.action"},
-									{"menuid":"22","menuname":"现有课程","icon":"icon-nav","url":"course_lists.action"}]
-						},		
-						
-						{"menuid":"13","icon":"icon-sys","menuname":"章节管理",
-							"menus":[
-								    {"menuid":"81","menuname":"待审核信息","icon":"icon-nav","url":"chapter_undisposedList.action"},
-									{"menuid":"82","menuname":"已审核信息","icon":"icon-nav","url":"chapter_allList.action"}]
+									{"menuid":"11","menuname":"添加图片","icon":"icon-add","url":"getaddimgPanel.action"},
+									{"menuid":"12","menuname":"现有图片","icon":"icon-nav","url":"listImg.action"}
+									]
 						},
 						{"menuid":"14","icon":"icon-sys","menuname":"附件管理",
 							"menus":[

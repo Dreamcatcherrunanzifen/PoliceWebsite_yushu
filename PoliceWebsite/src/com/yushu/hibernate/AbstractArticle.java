@@ -31,7 +31,7 @@ public abstract class AbstractArticle implements java.io.Serializable {
 
 	/** minimal constructor */
 	public AbstractArticle(Type type, String articleTitle,
-			String articleContent, Timestamp publishTime, Integer articleClick,
+			String articleContent,String articleAuthor, Timestamp publishTime, Integer articleClick,
 			String articleFrom) {
 		this.type = type;
 		this.articleTitle = articleTitle;
@@ -39,6 +39,7 @@ public abstract class AbstractArticle implements java.io.Serializable {
 		this.publishTime = publishTime;
 		this.articleClick = articleClick;
 		this.articleFrom = articleFrom;
+		this.articleAuthor=articleAuthor;
 	}
 
 	/** full constructor */

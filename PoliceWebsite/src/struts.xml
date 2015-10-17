@@ -35,18 +35,71 @@
 
 
 
-		<action name="adminindex" method="execute" class="com.yushu.action.adminAction">
+		<action name="adminindex" method="execute" class="com.yushu.adminaction.adminAction">
 			<result name="success">
 				WEB-INF/jsp/admin/index.jsp
 			</result>
 		</action>
-		
-		<action name="adminlogin" method="login" class="com.yushu.action.adminAction">
+		<!-- 后台管理系统配置 -->
+		<!-- 登录 -->
+		<action name="adminlogin" method="login" class="com.yushu.adminaction.adminAction">
 			<result name="success">
 				WEB-INF/jsp/admin/login.jsp
 			</result>
 		</action>
-		
+		<action name="logincheck" method="check" class="com.yushu.adminaction.adminAction">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="savepass" method="save" class="com.yushu.adminaction.adminAction">
+			<result name="success">
+				WEB-INF/jsp/admin/login.jsp
+			</result>
+		</action>
+		<action name="userpass" method="userpass" class="com.yushu.adminaction.adminAction">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="changepass" method="change" class="com.yushu.adminaction.adminAction">
+			<result name="success">
+				WEB-INF/jsp/admin/edit_password.jsp
+			</result>
+		</action>
+		<!-- 文章 -->
+		<action name="getaddPanel" method="typelist" class="com.yushu.adminaction.articleAction">
+			<result name="success">
+				WEB-INF/jsp/admin/article/add.jsp
+			</result>
+		</action>
+		<action name="addArticle" method="add" class="com.yushu.adminaction.articleAction">
+				<result type="redirectAction">getaddPanel</result>	
+		</action>
+		<action name="listArticle" method="list" class="com.yushu.adminaction.articleAction">
+			<result name="success">
+				WEB-INF/jsp/admin/article/list.jsp
+			</result>
+		</action>
+		<action name="ImgUpload" class="com.yushu.adminaction.ImgUploadAction"
+				method="imgUpload">
+			</action>
+		<!-- 图片 -->
+		<action name="getaddimgPanel" method="typelist" class="com.yushu.adminaction.imgAction">
+			<result name="success">
+				WEB-INF/jsp/admin/img/add.jsp
+			</result>
+		</action>
+		<action name="addImg" method="add" class="com.yushu.adminaction.imgAction">
+				<result type="redirectAction">getaddimgPanel</result>	
+		</action>
+		<action name="listImg" method="list" class="com.yushu.adminaction.imgAction">
+			<result name="success">
+				WEB-INF/jsp/admin/img/list.jsp
+			</result>
+		</action>
+		<!-- 前台配置 -->
+		<!-- 首页 -->
 		<action name="getarticlelist" method="list" class="com.yushu.action.indexAction">
 			<result name="success">
 				WEB-INF/jsp/index/article.jsp

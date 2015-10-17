@@ -15,9 +15,9 @@ public class Article extends AbstractArticle implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public Article(Type type, String articleTitle, String articleContent,
+	public Article(Type type, String articleTitle, String articleContent,String articleAuthor,
 			Timestamp publishTime, Integer articleClick, String articleFrom) {
-		super(type, articleTitle, articleContent, publishTime, articleClick,
+		super(type, articleTitle, articleContent, articleAuthor,publishTime, articleClick,
 				articleFrom);
 	}
 

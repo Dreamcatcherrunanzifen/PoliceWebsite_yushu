@@ -34,14 +34,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body class="easyui-layout" style="overflow-y: hidden; scroll="no">
 	<div region="north" split="true" border="false" id="admin_status">
 
-	<span style="float: right; padding-right: 20px;" class="head" >管理员： &nbsp;&nbsp;<a href="login" id="logout">安全退出</a></span>
-	<span style="float: right; padding-right: 20px;" class="head">前台首页：<select id="course_select" onChange="changeUrl();">
-		<option value="0">请选择课程...</option>
-		
-	       <option value="{% $k.course_id %}">课程名字</option>
-		
-	</select></span>
-	<span style="padding-left: 15px; font-size: 16px;"><img src="images/video.png" align="absmiddle" style="padding-right: 15px" />翻转课堂视频管理平台</span>
+	<span style="float: right; padding-right: 20px;" class="head" >管理员： &nbsp;&nbsp;<a href="adminlogin" id="logout">安全退出</a></span>
+	
+	<span style="padding-left: 15px; font-size: 16px;"><img src="<%=path%>/images/police.png" align="absmiddle" style="padding-right: 15px" />玉树公安局后台管理平台</span>
 	</div>
 	<div region="south" style="height: 30px; background: #D2E0F2;"></div>
 	<div region="west" hide="true" split="true" title="导航菜单"
@@ -56,7 +51,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			欢迎进入
 			</p>
 			<p id="tit">
-			翻转课堂视频管理平台
+			玉树公安局后台管理平台
 			</p>
 			<!-- <img src="images/index_backbround.jpg" style="width:100%;height:100%"/><p>
 			欢迎进入

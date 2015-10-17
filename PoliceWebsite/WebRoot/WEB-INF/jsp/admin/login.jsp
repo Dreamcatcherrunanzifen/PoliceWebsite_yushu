@@ -50,7 +50,7 @@
 	function login() {
 		var user_name = $("#username").val();
 		var pass_word = $("#password").val();
-        $("#flag").html("正在登录...");
+        
 		var params = {
 			"username" : user_name,
 			"password" : pass_word
@@ -62,7 +62,7 @@
 			data : params,
 			dataType : 'json',
 			success : function(data) {
-				//alert(data);
+				
 				var member = eval("(" + data + ")");
 				
 				switch (member.information) {
@@ -72,11 +72,9 @@
 				case "error1":
 					$("#flag").html("用户" + params.username + "的密码不正确！");
 					break;
-				case "teacher":
-					location.href = 'index_t.action';
-					break;
-				case "admin":
-					location.href = 'index.action';
+				case "success":
+				    $("#flag").html("正在登录...");
+					location.href = 'adminindex.action';
 					break;
 				}
 			}
@@ -109,7 +107,7 @@
 						<input type="reset" value="" />
 					</div>
 					<div class="register">
-						<a href="register">修改密码  </a>
+						<a href="changepass.action">修改密码  </a>
 					</div>
 					<span id="flag"></span>
 				</div>

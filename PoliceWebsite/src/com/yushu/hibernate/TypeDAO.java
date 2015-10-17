@@ -50,8 +50,10 @@ public class TypeDAO extends BaseHibernateDAO {
 	public Type findById(java.lang.Integer id) {
 		log.debug("getting Type instance with id: " + id);
 		try {
+			System.out.println("sdfsdf");
 			Type instance = (Type) getSession().get("com.yushu.hibernate.Type",
 					id);
+			
 			return instance;
 		} catch (RuntimeException re) {
 			log.error("get failed", re);

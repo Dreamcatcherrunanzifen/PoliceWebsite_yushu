@@ -42,6 +42,7 @@
 		<mapping resource="com/yushu/hibernate/Type.hbm.xml" />
 		<mapping resource="com/yushu/hibernate/Message.hbm.xml" />
 		<mapping resource="com/yushu/hibernate/Customs.hbm.xml" />
+		<mapping resource="com/yushu/hibernate/Adminuser.hbm.xml" />
 
 	</session-factory>
 

@@ -18,9 +18,7 @@
 	src="<%=path%>/include/tinymce/tiny_mce.js"> </script>
 <script language="javascript" type="text/javascript"
 	src="<%=path%>/js/tinymce_kcfinder_config.js"></script>
-<script>
-	
-</script>
+
 
 <title>获取文章列表</title>
 </head>
@@ -28,6 +26,11 @@
   	<s:iterator value="articlelist">
   	<p><s:property value="articleTitle"/></p>
   	<p><s:property value="articleContent"/></p>
+  	</s:iterator>
+  	(((((())))))
+  	<s:iterator value="imglist">
+  	<img src="<s:property value="imgSrc"/>"/>
+  
   	</s:iterator>
 </body>
 </html>

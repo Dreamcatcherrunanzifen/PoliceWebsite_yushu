@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Set;
 import org.hibernate.LockMode;
 import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 import org.hibernate.criterion.Example;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,7 +35,12 @@ public class ArticleDAO extends BaseHibernateDAO {
 	public void save(Article transientInstance) {
 		log.debug("saving Article instance");
 		try {
-			getSession().save(transientInstance);
+			Session session=getSession();
+			Transaction tran = session.beginTransaction();	
+			session.save(transientInstance);
+			tran.commit();
+			session.clear();
+			session.close();
 			log.debug("save successful");
 		} catch (RuntimeException re) {
 			log.error("save failed", re);
@@ -44,7 +51,12 @@ public class ArticleDAO extends BaseHibernateDAO {
 	public void delete(Article persistentInstance) {
 		log.debug("deleting Article instance");
 		try {
-			getSession().delete(persistentInstance);
+			Session session=getSession();
+			Transaction tran =session.beginTransaction();
+			session.delete(persistentInstance);
+			tran.commit();
+			session.clear();
+			session.close();
 			log.debug("delete successful");
 		} catch (RuntimeException re) {
 			log.error("delete failed", re);
