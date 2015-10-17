@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.multipart.saveDir" value="/tmp" />
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="false" />
+	<!-- struts常量定义 -->
+
+	<!-- 指定struts国际化资源文件的baseName -->
+	<constant name="struts.custom.i18n.resources" value="messageResource" />
+	<!-- 指定每次HTTP请求时是否重新加载国际化资源文件，默认为false,开发阶段设为true -->
+	<constant name="struts.i18n.reload" value="true" />
+	<!-- 配置应用的编码方式 -->
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<!-- struts.xml变更时是否自动重新加载 -->
+	<constant name="struts.configuration.xml.reload" value="true" />
+	<!-- 限定上传文件最大大小4M,struts2默认maxSize为2M -->
+	<constant name="struts.multipart.maxSize" value="900000000"></constant>
+	<!-- 指定上传文件时临时文件的存放路径,设为"/tempUpload"将在 项目所在盘下创建文件夹tempUpload -->
+	<constant name="struts.multipart.saveDir" value="/tempUpload"></constant>
+
+	<package name="index" namespace="/" extends="json-default">
+		<global-results>
+			<result name="error">/error.jsp</result>
+		</global-results>
+
+		<global-exception-mappings>
+			<exception-mapping exception="java.lang.Exception"
+				result="error" />
+		</global-exception-mappings>
+
+
+
+		<action name="adminindex" method="execute" class="com.yushu.adminaction.adminAction">
+			<result name="success">
+				WEB-INF/jsp/admin/index.jsp
+			</result>
+		</action>
+		<!-- 后台管理系统配置 -->
+		<!-- 登录 -->
+		<action name="adminlogin" method="login" class="com.yushu.adminaction.adminAction">
+			<result name="success">
+				WEB-INF/jsp/admin/login.jsp
+			</result>
+		</action>
+		<action name="logincheck" method="check" class="com.yushu.adminaction.adminAction">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="savepass" method="save" class="com.yushu.adminaction.adminAction">
+			<result name="success">
+				WEB-INF/jsp/admin/login.jsp
+			</result>
+		</action>
+		<action name="userpass" method="userpass" class="com.yushu.adminaction.adminAction">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="changepass" method="change" class="com.yushu.adminaction.adminAction">
+			<result name="success">
+				WEB-INF/jsp/admin/edit_password.jsp
+			</result>
+		</action>
+		<!-- 文章 -->
+		<action name="getaddPanel" method="typelist" class="com.yushu.adminaction.articleAction">
+			<result name="success">
+				WEB-INF/jsp/admin/article/add.jsp
+			</result>
+		</action>
+		<action name="addArticle" method="add" class="com.yushu.adminaction.articleAction">
+				<result type="redirectAction">getaddPanel</result>	
+		</action>
+		<action name="listArticle" method="list" class="com.yushu.adminaction.articleAction">
+			<result name="success">
+				WEB-INF/jsp/admin/article/list.jsp
+			</result>
+		</action>
+		<action name="ImgUpload" class="com.yushu.adminaction.ImgUploadAction"
+				method="imgUpload">
+			</action>
+		<!-- 图片 -->
+		<action name="getaddimgPanel" method="typelist" class="com.yushu.adminaction.imgAction">
+			<result name="success">
+				WEB-INF/jsp/admin/img/add.jsp
+			</result>
+		</action>
+		<action name="addImg" method="add" class="com.yushu.adminaction.imgAction">
+				<result type="redirectAction">getaddimgPanel</result>	
+		</action>
+		<action name="listImg" method="list" class="com.yushu.adminaction.imgAction">
+			<result name="success">
+				WEB-INF/jsp/admin/img/list.jsp
+			</result>
+		</action>
+		<!-- 前台配置 -->
+		<!-- 首页 -->
+		<action name="getarticlelist" method="list" class="com.yushu.action.indexAction">
+			<result name="success">
+				WEB-INF/jsp/index/article.jsp
+			</result>
+		</action>
+</package></struts>
