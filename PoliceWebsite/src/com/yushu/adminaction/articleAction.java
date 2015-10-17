@@ -48,6 +48,7 @@ public class articleAction extends ActionSupport {
 	private String check;
 	private Article article;
 	
+	
 	public String getCheck() {
 		return check;
 	}

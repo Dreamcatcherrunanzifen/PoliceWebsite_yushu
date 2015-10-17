@@ -74,7 +74,7 @@
 					break;
 				case "success":
 				    $("#flag").html("正在登录...");
-					location.href = 'adminindex.action';
+					location.href = 'adminindex.action?flag=login';
 					break;
 				}
 			}

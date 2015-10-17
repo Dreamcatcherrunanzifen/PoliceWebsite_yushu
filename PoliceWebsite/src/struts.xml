@@ -36,9 +36,10 @@
 
 
 		<action name="adminindex" method="execute" class="com.yushu.adminaction.adminAction">
-			<result name="success">
+			<result name="login">
 				WEB-INF/jsp/admin/index.jsp
 			</result>
+			
 		</action>
 		<!-- 后台管理系统配置 -->
 		<!-- 登录 -->

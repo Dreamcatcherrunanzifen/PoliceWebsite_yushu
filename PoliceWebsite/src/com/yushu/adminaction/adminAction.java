@@ -30,6 +30,14 @@ public class adminAction extends ActionSupport {
 	private AdminuserDAO adminuserdao;
 	private List<Adminuser> userlist;
 	private String result;
+	private String flag="";
+	
+	public String getFlag() {
+		return flag;
+	}
+	public void setFlag(String flag) {
+		this.flag = flag;
+	}
 	public String getResult() {
 		return result;
 	}
@@ -50,7 +58,7 @@ public class adminAction extends ActionSupport {
 	}
 	public String execute()
 	{
-		return SUCCESS;
+		return flag;
 	}
 	public String login()
 	{
@@ -85,7 +93,7 @@ public class adminAction extends ActionSupport {
     {
     	return SUCCESS;
     }
-    public String userpass()
+    public String userpass()   
     {
     	adminuserdao=new AdminuserDAO();
     	
