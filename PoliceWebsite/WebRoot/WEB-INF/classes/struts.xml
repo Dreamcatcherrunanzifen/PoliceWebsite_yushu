@@ -129,8 +129,8 @@
 		</action>
 		<action name="articleDetail" method="detail"
 			class="com.yushu.action.indexAction">
-			<result name="success">
-				WEB-INF/jsp/index/article_detail.jsp
+			<result type="json">
+				<param name="root">result</param>
 			</result>
 		</action>
 

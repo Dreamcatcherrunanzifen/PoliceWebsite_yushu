@@ -12,9 +12,8 @@
 			link:function(scope,elem,attr){
 				$http.get('imglist').success(function(data){
 					scope.imgList=eval('('+data+')');
-					console.log(scope.imgList);
-				})
+				});
 			}
-		}
-	}])
-}(angular))
+		};
+	}]);
+}(angular));

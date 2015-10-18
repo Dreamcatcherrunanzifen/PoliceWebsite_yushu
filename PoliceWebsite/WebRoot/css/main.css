@@ -240,17 +240,19 @@ body {
 .m-artiDetail .nav {
   padding: 0 16px;
   margin-bottom: 10px;
+  background-color: white;
   line-height: 46px;
   font-size: 13px;
   color: #666;
   border: 1px solid #ddd;
-  margin-top: none;
+  border-top: none;
 }
 .m-artiDetail .nav .curr {
   color: #1565C0;
 }
 .m-artiDetail .detail {
   padding: 45px 70px 0px 70px;
+  background-color: white;
   text-align: center;
   line-height: 30px;
   border: 1px solid #ddd;

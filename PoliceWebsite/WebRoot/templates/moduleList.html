@@ -4,9 +4,13 @@
 	</div>
 	<ul class=itemWrap>
 		<li class="item" ng-repeat="item in data"><i
-			class="u-icon-redCircle"></i> <span class="title f-wordclips"
-			ng-click="gotoDetail($event,item.id)"> <a href="">{{item.articleTitle}}</a>
-		</span> <span class="u-redLabel">new</span> <span class="time f-fr">2015-10-01</span>
+			class="u-icon-redCircle"></i> 
+			<span class="title f-wordclips"
+				ng-click="gotoDetail($event,item.articleId)"> 
+				<a href="">{{item.articleTitle}}</a>
+				 <span class="u-redLabel">new</span> 
+			</span>
+				<span class="time f-fr">{{item.addTime}}</span>
 		</li>
 	</ul>
 </div>

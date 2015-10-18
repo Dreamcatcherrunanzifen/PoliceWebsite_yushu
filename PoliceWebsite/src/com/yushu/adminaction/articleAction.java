@@ -46,6 +46,7 @@ public class articleAction extends ActionSupport {
 	private String articleAuthor;
 	private String articleType;
 	private String check;
+    private String str;
 	private Article article;
 	
 	
@@ -158,7 +159,12 @@ public class articleAction extends ActionSupport {
 		typedao=new TypeDAO();
 		articledao=new ArticleDAO();
 		imgcenterdao=new ImgCenterDAO();
-		String str=content.substring(content.indexOf("src=")+5,content.indexOf("alt")-2);
+		if(content.indexOf("src=")>=0)		
+		{
+		
+		str=content.substring(content.indexOf("src=")+5,content.indexOf("alt")-2);
+		}
+		
 		Type type=typedao.findById(Integer.parseInt(articleType));
 		article=new Article(type,articleTitle,content,articleAuthor,new Timestamp(System.currentTimeMillis()),0,articleFrom);
 		

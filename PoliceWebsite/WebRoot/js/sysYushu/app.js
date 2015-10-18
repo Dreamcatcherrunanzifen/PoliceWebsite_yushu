@@ -1,7 +1,6 @@
 /**
  * 
  */
-(function(angular,jq){
 	var root = "/PoliceWebsite/templates/";
 	var app=angular.module('sysYushuApp',
 			['ngRoute',
@@ -28,6 +27,7 @@
 		.when("/satisfaction", {templateUrl: root + "satisfaction_tpl.html", controller: "satisfactionCtrl"})
 		.when("/liveMessage", {templateUrl: root + "liveMessage_tpl.html", controller: "liveMessageCtrl"})
 		.when("/manage", {templateUrl: root + "manage_tpl.html", controller: "manageCtrl"})
+		.when("/articleDetail/?:articleId", {templateUrl: root + "articleDetail_tpl.html", controller: "articleDetailCtrl"})
 		.otherwise( {redirectTo:'/home'});
 	}])
 	.controller('appCtrl',["$scope",'$location',function($scope,$location){
@@ -39,4 +39,3 @@
 		};
 	}]);
 	
-}(angular,jQuery));

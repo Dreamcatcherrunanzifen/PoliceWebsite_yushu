@@ -25,7 +25,7 @@
 <script language="javascript" type="text/javascript"
 	src="<%=path%>/js/base/angular-carousel/angular-carousel.min.js"></script>
 <script language="javascript" type="text/javascript"
-	src="<%=path%>/js/base/jQuery/jquery-1.9.1.min.js"></script>
+	src="<%=path%>/js/jquery-1.9.1.min.js"></script>
 
 <title>玉树藏族自治州公安局</title>
 </head>
@@ -33,14 +33,27 @@
 	<div class='m-header'></div>
 	<div class='m-menu'>
 		<ul class='menuWrap'>
-			<li class='menuItem' ng-class="{'z-active':menuSelected=='home'}" ng-click="changePath('home')">首页</li>
-			<li class='menuItem' ng-class="{'z-active':menuSelected=='instituSetting'}" ng-click="changePath('instituSetting')">机构设置</li>
-			<li class='menuItem' ng-class="{'z-active':menuSelected=='policeDy'}" ng-click="changePath('policeDy')">警务动态</li>
-			<li class='menuItem' ng-class="{'z-active':menuSelected=='infoPublic'}" ng-click="changePath('infoPublic')">信息公开</li>
-			<li class='menuItem' ng-class="{'z-active':menuSelected=='aboutYushu'}" ng-click="changePath('aboutYushu')">玉树风情</li>
-			<li class='menuItem' ng-class="{'z-active':menuSelected=='satisfaction'}" ng-click="changePath('satisfaction')">满意度调查</li>
-			<li class='menuItem' ng-class="{'z-active':menuSelected=='liveMessage'}" ng-click="changePath('liveMessage')">留言板</li>
-			<li class='menuItem' ng-class="{'z-active':menuSelected=='manage'}" ng-click="changePath('manage')">网站管理</li>
+			<li class='menuItem' ng-class="{'z-active':menuSelected=='home'}"
+				ng-click="changePath('home')">首页</li>
+			<li class='menuItem'
+				ng-class="{'z-active':menuSelected=='instituSetting'}"
+				ng-click="changePath('instituSetting')">机构设置</li>
+			<li class='menuItem' ng-class="{'z-active':menuSelected=='policeDy'}"
+				ng-click="changePath('policeDy')">警务动态</li>
+			<li class='menuItem'
+				ng-class="{'z-active':menuSelected=='infoPublic'}"
+				ng-click="changePath('infoPublic')">信息公开</li>
+			<li class='menuItem'
+				ng-class="{'z-active':menuSelected=='aboutYushu'}"
+				ng-click="changePath('aboutYushu')">玉树风情</li>
+			<li class='menuItem'
+				ng-class="{'z-active':menuSelected=='satisfaction'}"
+				ng-click="changePath('satisfaction')">满意度调查</li>
+			<li class='menuItem'
+				ng-class="{'z-active':menuSelected=='liveMessage'}"
+				ng-click="changePath('liveMessage')">留言板</li>
+			<li class='menuItem' ng-class="{'z-active':menuSelected=='manage'}"
+				ng-click="changePath('manage')">网站管理</li>
 		</ul>
 	</div>
 	<ng-view></ng-view>
@@ -50,6 +63,8 @@
 		</p>
 	</div>
 </body>
+<%-- <script language="javascript" type="text/javascript"
+	src="<%=path%>/js/all.min.js"></script> --%>
 <script language="javascript" type="text/javascript"
 	src="<%=path%>/js/sysYushu/app.js"></script>
 <script language="javascript" type="text/javascript"
@@ -76,6 +91,8 @@
 	src="<%=path%>/js/sysYushu/controllers/liveMessage_ctrl.js"></script>
 <script language="javascript" type="text/javascript"
 	src="<%=path%>/js/sysYushu/controllers/manage_ctrl.js"></script>
+<script language="javascript" type="text/javascript"
+	src="<%=path%>/js/sysYushu/controllers/articleDetail_ctrl.js"></script>
 
 
 </html>

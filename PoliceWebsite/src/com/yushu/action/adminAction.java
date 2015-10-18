@@ -77,7 +77,6 @@ public class adminAction extends ActionSupport {
 			map.put("information", "error2");	
 		}
 		JSONObject jo = JSONObject.fromObject(map);
-		
 		this.result = jo.toString();
 		return SUCCESS;
 	}
