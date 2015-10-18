@@ -35,64 +35,74 @@
 
 
 
-		<action name="adminindex" method="execute" class="com.yushu.adminaction.adminAction">
+		<action name="adminindex" method="execute"
+			class="com.yushu.adminaction.adminAction">
 			<result name="login">
 				WEB-INF/jsp/admin/index.jsp
 			</result>
-			
+
 		</action>
 		<!-- 后台管理系统配置 -->
 		<!-- 登录 -->
-		<action name="adminlogin" method="login" class="com.yushu.adminaction.adminAction">
+		<action name="adminlogin" method="login"
+			class="com.yushu.adminaction.adminAction">
 			<result name="success">
 				WEB-INF/jsp/admin/login.jsp
 			</result>
 		</action>
-		<action name="logincheck" method="check" class="com.yushu.adminaction.adminAction">
+		<action name="logincheck" method="check"
+			class="com.yushu.adminaction.adminAction">
 			<result type="json">
 				<param name="root">result</param>
 			</result>
 		</action>
-		<action name="savepass" method="save" class="com.yushu.adminaction.adminAction">
+		<action name="savepass" method="save"
+			class="com.yushu.adminaction.adminAction">
 			<result name="success">
 				WEB-INF/jsp/admin/login.jsp
 			</result>
 		</action>
-		<action name="userpass" method="userpass" class="com.yushu.adminaction.adminAction">
+		<action name="userpass" method="userpass"
+			class="com.yushu.adminaction.adminAction">
 			<result type="json">
 				<param name="root">result</param>
 			</result>
 		</action>
-		<action name="changepass" method="change" class="com.yushu.adminaction.adminAction">
+		<action name="changepass" method="change"
+			class="com.yushu.adminaction.adminAction">
 			<result name="success">
 				WEB-INF/jsp/admin/edit_password.jsp
 			</result>
 		</action>
 		<!-- 文章 -->
-		<action name="getaddPanel" method="typelist" class="com.yushu.adminaction.articleAction">
+		<action name="getaddPanel" method="typelist"
+			class="com.yushu.adminaction.articleAction">
 			<result name="success">
 				WEB-INF/jsp/admin/article/add.jsp
 			</result>
 		</action>
-		<action name="addArticle" method="add" class="com.yushu.adminaction.articleAction">
-				<result type="redirectAction">getaddPanel</result>	
+		<action name="addArticle" method="add"
+			class="com.yushu.adminaction.articleAction">
+			<result type="redirectAction">getaddPanel</result>
 		</action>
-		<action name="listArticle" method="list" class="com.yushu.adminaction.articleAction">
+		<action name="listArticle" method="list"
+			class="com.yushu.adminaction.articleAction">
 			<result name="success">
 				WEB-INF/jsp/admin/article/list.jsp
 			</result>
 		</action>
 		<action name="ImgUpload" class="com.yushu.adminaction.ImgUploadAction"
-				method="imgUpload">
-			</action>
+			method="imgUpload">
+		</action>
 		<!-- 图片 -->
-		<action name="getaddimgPanel" method="typelist" class="com.yushu.adminaction.imgAction">
+		<action name="getaddimgPanel" method="typelist"
+			class="com.yushu.adminaction.imgAction">
 			<result name="success">
 				WEB-INF/jsp/admin/img/add.jsp
 			</result>
 		</action>
 		<action name="addImg" method="add" class="com.yushu.adminaction.imgAction">
-				<result type="redirectAction">getaddimgPanel</result>	
+			<result type="redirectAction">getaddimgPanel</result>
 		</action>
 		<action name="listImg" method="list" class="com.yushu.adminaction.imgAction">
 			<result name="success">
@@ -101,9 +111,34 @@
 		</action>
 		<!-- 前台配置 -->
 		<!-- 首页 -->
-		<action name="getarticlelist" method="list" class="com.yushu.action.indexAction">
+		<action name="articlelist" method="list"
+			class="com.yushu.action.indexAction">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="imglist" method="imgListGet" class="com.yushu.action.indexAction">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="policeHome" method="home" class="com.yushu.action.indexAction">
+			<result name="success">
+				WEB-INF/jsp/index/home.jsp
+			</result>
+		</action>
+		<action name="articleDetail" method="detail"
+			class="com.yushu.action.indexAction">
+			<result name="success">
+				WEB-INF/jsp/index/article_detail.jsp
+			</result>
+		</action>
+
+		<action name="getarticlelist" method="list"
+			class="com.yushu.action.indexAction">
 			<result name="success">
 				WEB-INF/jsp/index/article.jsp
 			</result>
 		</action>
-</package></struts>
+	</package>
+</struts>

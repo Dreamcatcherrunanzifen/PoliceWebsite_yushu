@@ -1,0 +1,12 @@
+<div class="m-module" ng-class="{ 'm-module-1': tplType=='2'}">
+	<div class="header">
+		{{ data[0].articleTypeName}} <a href="#" class="more f-fr">更多</a>
+	</div>
+	<ul class=itemWrap>
+		<li class="item" ng-repeat="item in data"><i
+			class="u-icon-redCircle"></i> <span class="title f-wordclips"
+			ng-click="gotoDetail($event,item.id)"> <a href="">{{item.articleTitle}}</a>
+		</span> <span class="u-redLabel">new</span> <span class="time f-fr">2015-10-01</span>
+		</li>
+	</ul>
+</div>

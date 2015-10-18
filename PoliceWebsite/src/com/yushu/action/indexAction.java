@@ -29,6 +29,20 @@ public class indexAction extends ActionSupport {
     private ImgCenterDAO imgcenterdao;
     private List<Article> articlelist;
     private List<ImgCenter> imglist;
+    private String result;
+    private String articletype;
+	public String getArticletype() {
+		return articletype;
+	}
+	public void setArticletype(String articletype) {
+		this.articletype = articletype;
+	}
+	public String getResult() {
+		return result;
+	}
+	public void setResult(String result) {
+		this.result = result;
+	}
 	public ImgCenterDAO getImgcenterdao() {
 		return imgcenterdao;
 	}
@@ -53,8 +67,64 @@ public class indexAction extends ActionSupport {
 	public void setArticlelist(List<Article> articlelist) {
 		this.articlelist = articlelist;
 	}
+	public String home()
+	{
+		articledao=new ArticleDAO();
+		articlelist=articledao.findAll();
+		
+		return SUCCESS;
+	}
+	public String detail()
+	{
+		System.out.println("success");
+		return SUCCESS;
+	}
 	public String list()
 	{
+		articledao=new ArticleDAO();
+		articlelist=articledao.findAll();
+		
+		
+		JSONArray jsonArray = new JSONArray();
+		int length=0;
+		for(int i=0;i<articlelist.size();i++)
+		{
+			
+			if(articlelist.get(i).getType().getTypeId()==Integer.parseInt(articletype)){
+				JSONObject jsonObject = new JSONObject();
+				jsonObject.put("articleTitle", articlelist.get(i).getArticleTitle());
+				jsonObject.put("addDate", articlelist.get(i).getPublishTime());
+				jsonObject.put("author", articlelist.get(i).getArticleAuthor());
+				jsonObject.put("articleId", articlelist.get(i).getArticleId());
+				jsonObject.put("articleCont", articlelist.get(i).getArticleContent());
+				jsonObject.put("articleType", articlelist.get(i).getType().getTypeId());
+				jsonObject.put("articleTypeName", articlelist.get(i).getType().getTypeName());
+				
+				jsonArray.add(length, jsonObject);
+				length++;
+			}
+			
+			
+		}
+	    result=jsonArray.toString();
+		return SUCCESS;
+	}
+	public String imgListGet(){
+		imgcenterdao=new ImgCenterDAO();
+		imglist=imgcenterdao.findAll();
+
+		JSONArray jsonArray = new JSONArray();
+		for(int i=0;i<imglist.size();i++)
+		{
+				JSONObject jsonObject = new JSONObject();
+				jsonObject.put("imgId", imglist.get(i).getImgId());
+				jsonObject.put("imgUrl", imglist.get(i).getImgSrc());
+				jsonObject.put("imgArticle", imglist.get(i).getArticle().getArticleId());
+				jsonArray.add(i, jsonObject);
+			
+		}
+		
+		result=jsonArray.toString();
 		
 		return SUCCESS;
 	}
