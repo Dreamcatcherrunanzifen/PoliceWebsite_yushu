@@ -1,0 +1,122 @@
+@CHARSET "UTF-8";
+body{
+	background:#F1FDFE;
+	font-family:"微软雅黑";
+}
+#frame1{
+	margin:0;
+	padding:0;
+	
+}
+#frame2{
+	margin:0;
+	padding:0;
+	
+}
+#content{
+	margin:0 auto;
+	min-height:520px;
+}
+
+.submits{
+	margin:0 auto;
+	text-align:center;
+}
+.add{
+	background:url(../images/continue.png) no-repeat;
+	width:160px;
+	height:40px;
+	margin-left:360px;
+	margin-right:20px;
+	margin-top:10px;
+	padding-left:25px;
+	padding-top:12px;
+	float:left;
+	border:0;
+	color:#FFF;
+	font-family:"幼圆";
+	font-size:15px;
+	
+}
+a{
+	
+	text-decoration:none;
+	text-align:center;
+}
+.add_button
+{
+	text-decoration:none;
+	text-align:center;
+	color:#FFF;
+}
+ul{
+    width: 750px;
+    overflow: hidden;
+	margin:0 auto;
+	padding-left: 0px;
+}
+li{
+list-style-type:none;
+}
+.li_style{
+	border-bottom: dotted 1px #ccc;
+	margin:15px 0px 10px 0px;
+	padding-bottom: 20px;
+}
+.li_style div{
+margin-bottom:6px;
+}
+.course_name_info{
+   margin:30px 0px 10px 122px;
+}
+#course_index_info{
+   margin:10px 0px 10px 122px;
+}
+#course_calander_info{
+   width: 748px;
+   overflow: hidden;
+   border: dotted 1px #ccc;	
+}
+#course_calander_info div{
+   text-align: center;
+   margin:5px;
+}
+.hide{
+visibility: hidden;
+}
+.inputs{
+	margin-left:10px;
+}
+.buttons{
+	background:url(../images/submit.png) no-repeat;
+	width:150px;
+	height:40px;
+	margin:10px;
+	border:0;
+	color:#FFF;
+	font-family:"幼圆";
+	font-size:15px;
+	
+}
+.nameSpan{
+	width:180px;
+}
+.nameSpan1{
+	width:180px;
+	position:relative;
+	left:10px;
+}
+.nameSpan2{
+	width:180px;
+	position:relative;
+	left:10px;
+	margin-right:40px;
+}
+#school
+{
+	margin:0 auto;
+}
+#type_select
+{
+	 margin:30px 0px 10px 132px;
+}

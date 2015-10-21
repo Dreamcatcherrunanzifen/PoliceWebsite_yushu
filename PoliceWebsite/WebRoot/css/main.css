@@ -1,0 +1,373 @@
+.g-main {
+  width: 1000px;
+  margin: auto;
+  margin-bottom: 160px;
+  font-size: 0px;
+}
+body {
+  background-color: white;
+}
+.m-header {
+  width: 100%;
+  height: 332px;
+  background: url('/PoliceWebsite/images/web/header.png');
+  background-size: cover;
+}
+.m-menu {
+  width: 100%;
+  height: 52px;
+  background-color: #1565C0;
+  line-height: 52px;
+  text-align: center;
+}
+.m-menu .menuWrap {
+  margin: 0 auto;
+  display: inline-block;
+}
+.m-menu .menuWrap .menuItem {
+  width: 125px;
+  display: inline-block;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+}
+.m-menu .menuWrap .menuItem.z-active {
+  background-image: url('/PoliceWebsite/images/web/yushu/bg-current.png');
+  color: #1565C0;
+}
+.m-otherInfo {
+  position: relative;
+  padding: 0 16px;
+  background-color: white;
+  font-size: 13px;
+  color: #666;
+  line-height: 46px;
+  border: 1px solid #ddd;
+}
+.m-otherInfo .span {
+  display: inline-block;
+}
+.m-otherInfo .span.wel {
+  margin-right: 20px;
+}
+.m-otherInfo .u-search {
+  position: absolute;
+  top: 0px;
+  right: 16px;
+}
+.m-newsSlide {
+  position: relative;
+  width: 368px;
+  height: 286px;
+  display: inline-block;
+  background-color: #666;
+  margin-top: 10px;
+  margin-right: 8.5px;
+}
+.m-newsSlide .slideWrap {
+  width: 100%;
+  height: 100%;
+}
+.m-newsSlide .slideWrap .slideitem img {
+  width: 100%;
+}
+.m-newsSlide .slideIndicators {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 36px;
+  background-color: rgba(0, 0, 0, 0.3);
+  text-align: right;
+  line-height: 36px;
+  font-size: 9px;
+  color: white;
+}
+.m-newsSlide .slideIndicators .rn-carousel-indicator {
+  letter-spacing: 4px;
+  margin: 0 12px;
+}
+.m-newsSlide .slideIndicators .rn-carousel-indicator span {
+  color: white;
+}
+.m-newsSlide .slideIndicators .rn-carousel-indicator span.active {
+  color: #1766BE;
+}
+.m-newsSlide .slideTitle {
+  position: absolute;
+  bottom: 0;
+  left: 12px;
+  height: 36px;
+  line-height: 36px;
+  text-align: left;
+  font-size: 14px;
+  color: white;
+}
+.m-newsSlide.m-newsSlide-1 {
+  width: 100%;
+  height: 160px;
+}
+.m-newsSlide.m-newsSlide-1 .slideIndicators {
+  background-color: rgba(0, 0, 0, 0);
+}
+.m-module {
+  width: 368px;
+  display: inline-block;
+  margin-top: 10px;
+  vertical-align: top;
+  margin-right: 8.5px;
+  background-color: white;
+}
+.m-module .header {
+  height: 30px;
+  padding: 0 12px;
+  background-image: url('/PoliceWebsite/images/web/yushu/bg_title.png');
+  background-color: #E3F2FD;
+  background-repeat: no-repeat;
+  line-height: 30px;
+  color: white;
+  font-size: 14px;
+}
+.m-module .header .more {
+  color: #1565C0;
+}
+.m-module .itemWrap {
+  padding: 6px 12px;
+  font-size: 13px;
+  color: #333;
+  border: 1px solid #ddd;
+  border-top: none;
+}
+.m-module .itemWrap .item {
+  line-height: 26px;
+}
+.m-module .itemWrap .item .u-icon-redCircle {
+  vertical-align: middle;
+  margin-right: 4px;
+}
+.m-module .itemWrap .item .title {
+  display: inline-block;
+  width: 60%;
+  vertical-align: middle;
+}
+.m-module .itemWrap .item .time {
+  color: #999;
+}
+.m-module.m-module-1 {
+  width: 240px;
+  margin-right: 0px;
+}
+.m-module.m-module-1 .item .title {
+  width: 44%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.m-module.m-module-2 {
+  width: 240px;
+  margin-right: 0px;
+}
+.m-module.m-module-2 .itemWrap {
+  padding: 0px;
+}
+.m-module.m-module-2 .itemWrap .satiSurvey {
+  height: 78px;
+  background-color: #1565C0;
+  line-height: 78px;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+}
+.m-module.m-module-3 {
+  width: 100%;
+  margin-right: 0px;
+}
+.m-module.m-module-3 .itemWrap-2 {
+  padding: 18px 12px;
+  text-align: left;
+  font-size: 0px;
+}
+.m-module.m-module-3 .itemWrap-2 .picItem {
+  display: inline-block;
+  width: 189px;
+  background-color: #E3F2FD;
+  margin-bottom: 14px;
+  margin-right: 6px;
+  overflow: hidden;
+  text-align: center;
+}
+.m-module.m-module-3 .itemWrap-2 .picItem .pic {
+  height: 141px;
+}
+.m-module.m-module-3 .itemWrap-2 .picItem .name {
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #333;
+}
+.m-module.m-module-3 .itemWrap-2 .picItem:nth-child(5n) {
+  margin-right: 0px;
+}
+.m-module.m-module-4 {
+  width: 495px;
+  margin-right: 0px;
+}
+.m-module.m-module-4 .itemWrap {
+  font-size: 0px;
+}
+.m-module.m-module-4 .itemWrap .hrefItem {
+  display: inline-block;
+  width: 20%;
+  font-size: 13px;
+  color: #333;
+  text-align: center;
+  line-height: 30px;
+}
+.m-module.m-module-4 .itemWrap .hrefItem.hrefItem-2 {
+  width: 33%;
+}
+.m-footer {
+  padding: 36px;
+  background-color: #1565C0;
+}
+.m-footer .p {
+  font-size: 12px;
+  color: white;
+  text-align: center;
+}
+.m-artiDetail {
+  width: 100%;
+}
+.m-artiDetail .nav {
+  padding: 0 16px;
+  margin-bottom: 10px;
+  line-height: 46px;
+  font-size: 13px;
+  color: #666;
+  border: 1px solid #ddd;
+  margin-top: none;
+}
+.m-artiDetail .nav .curr {
+  color: #1565C0;
+}
+.m-artiDetail .detail {
+  padding: 45px 70px 0px 70px;
+  text-align: center;
+  line-height: 30px;
+  border: 1px solid #ddd;
+}
+.m-artiDetail .detail .title {
+  font-size: 20px;
+  color: #333;
+}
+.m-artiDetail .detail .time {
+  font-size: 12px;
+  color: #999;
+}
+.m-artiDetail .detail .content {
+  margin-top: 28px;
+  font-size: 14px;
+  color: #262626;
+  text-indent: 28px;
+  text-align: left;
+  line-height: 28px;
+}
+.m-artiDetail .detail .preNext {
+  margin: 70px -70px 0 -70px;
+  padding: 0 30px;
+  height: 50px;
+  line-height: 50px;
+  border-top: 1px solid #ddd;
+}
+.m-artiDetail .detail .preNext .title {
+  font-size: 14px;
+  color: #666;
+}
+.f-di {
+  display: inline-block;
+}
+.f-fl {
+  float: left;
+}
+.f-fr {
+  float: right;
+}
+.f-wordclips {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.u-search {
+  display: inline-block;
+}
+.u-search .input {
+  height: 28px;
+  background-color: #eee;
+  padding: 0px 6px;
+  border: 1px solid #ccc;
+  line-height: 30px;
+  border-radius: 2px;
+}
+.u-search .btn {
+  height: 30px;
+  background-color: #1565C0;
+  padding: 0px 10px;
+  line-height: 30px;
+  border: none;
+  color: white;
+  border-radius: 2px;
+}
+.u-icon-redCircle {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background-color: #E93E13;
+  border-radius: 4px;
+}
+.u-redLabel {
+  display: inline-block;
+  height: 14px;
+  line-height: 14px;
+  padding: 0 6px;
+  background-color: #E93E13;
+  border-radius: 8px;
+  color: white;
+  font-size: 9px;
+}
+.u-sina {
+  width: 100%;
+  height: 276px;
+}
+.u-wechat .title {
+  height: 30px;
+  background-color: #E3F2FD;
+  font-size: 12px;
+  color: #1565C0;
+  line-height: 30px;
+}
+.u-wechat .title .ic-wechat {
+  display: inline-block;
+  width: 18px;
+  height: 15px;
+  margin: 0 6px 0 12px;
+  background-image: url('/PoliceWebsite/images/web/yushu/wechat_img.png');
+  background-size: cover;
+  vertical-align: middle;
+}
+.u-wechat .content {
+  padding: 12px 16px;
+}
+.u-wechat .content .qrcode {
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  background-color: #E3F2FD;
+  vertical-align: middle;
+}
+.u-wechat .content .tips {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: 12px;
+  color: #42A5F5;
+  vertical-align: middle;
+  line-height: 20px;
+}

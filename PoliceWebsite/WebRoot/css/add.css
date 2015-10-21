@@ -1,0 +1,105 @@
+select {
+	border: 1px solid #acacac;
+	font-size: 1em;
+	border-radius: 0.5em;
+	-webkit-border-radius: .5em;
+	background: #fff url(../images/arrow.png)
+		no-repeat 99%;
+    
+	background-size: 1em 0.5em;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	line-height: 28px;
+	height: 28px;
+	padding: 0 1.5em 0 .75em;
+	color: #888;
+	-webkit-appearance: listbox;
+	-moz-appearance: listbox;
+	appearance: listbox;
+	width:100%
+}
+select::-ms-expand {
+	display: none
+}
+#content
+{
+	padding-top:80px;
+	padding-left:90px;
+	padding-right:90px;
+	width:90%;
+	background:#E5F2F5;
+	margin:0 auto;
+	margin-top:20px;
+	border-radius:10px;
+	border:#E0DBDB 1px solid;
+}
+.articletable
+{
+	width:100%;
+	border:0;
+}
+.articletable tr
+{
+	width:100%;
+	height:3em;
+	
+}
+.articletable td
+{
+	padding-right:10px;
+}
+.articletable td:last-child
+{
+	width:20%;
+}
+.form-control
+{
+	width:100%;
+	height:30px;
+}
+.secondtd
+{
+	width:60%;
+}
+
+#forms
+{
+	width:100%;
+	margin:0 auto;
+	background:#E0EAEA;
+	padding:30px;
+	border-radius:10px;
+}
+.btn-block
+{
+	width:30%;
+	display:inline;
+	height:2em;
+	line-height:1em;
+}
+.btn-block+.btn-block {
+    margin-top: 0px;
+}
+.button-click
+{
+	width:40%;
+	margin:0 auto;
+	margin-top:2em;
+	text-align:center;
+}
+.hidden
+{
+	display:none;
+}
+.addimg_panel
+{
+	position:fixed;
+	top:0;
+	left:20%;
+	background:#E0EAEA;
+	width:800px;
+	height:800px;
+	z-index:1000;
+	
+}
+

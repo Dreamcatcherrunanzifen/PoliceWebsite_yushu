@@ -1,0 +1,207 @@
+
+html{
+	overflow:hidden;
+}
+body{
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
+	line-height: 100%;
+	height: 100%;
+	border:0;
+	text-align: left;
+	background-color:#347fd7;
+}
+form{
+	margin: 0;
+	padding: 0;
+}
+.clear{
+	clear:both;
+	line-height:1px;
+}
+.login_main{
+	margin: 0 auto;
+	background-color: #1675b7;
+	text-align: left;
+	position:relative;
+	width:1003px;
+}
+.login_top{
+	width: 100%;
+	height: 259px;
+	background-image: url(../images/login_top.jpg);
+	background-repeat: no-repeat;
+}
+.login_middle{
+	width: 100%;
+	height: 254px;
+}
+.login_middleleft{
+	float: left;
+	width: 404px;/*鐧诲綍闈㈡澘涓儴宸︿晶瀹藉害*/
+	height: 100%;
+	background-image: url(../images/login_centerleft.jpg);
+	background-repeat: no-repeat;
+}
+.login_middlecenter{
+	float: left;
+	width: 599px;/*鐧诲綍闈㈡澘涓儴鍙充晶瀹藉害*/
+	height: 100%;
+	background-image: url(../images/login_centerright.jpg);
+	background-repeat: no-repeat;
+	text-align: left;
+}
+.login_bottom{
+	width: 100%;
+	height: 100px;/*鐧诲綍闈㈡澘搴曢儴楂樺害*/
+	background-image: url(../images/login_bottom.jpg);
+	background-repeat: no-repeat;
+}
+.login_title{
+	position:absolute;
+	left:235px;/*鏍囬x鍧愭爣*/
+	top:100px;/*鏍囬y鍧愭爣*/
+	width:560px;/*鏍囬瀹藉害*/
+	height:61px;/*鏍囬楂樺害*/
+	background-image: url(../images/title.png);
+	background-repeat: no-repeat;
+}
+.letter_space{
+letter-spacing:1em;
+}
+.login_user{
+	padding:0 0 0 0px;
+	font-weight:bold;
+	color:#ffffff;/*琛ㄥ崟鏂囧瓧棰滆壊*/
+	position:fixed;
+	top:280px;
+	left:685px;
+}
+.login_pass{
+	padding:24px 0 0 0px;
+	padding:22px 0 0 0px;
+	font-weight:bold;
+	color:#ffffff;
+	position:fixed;
+	top:300px;
+	left:685px;
+}
+#flag
+{
+	color:red;
+	position:fixed;
+	top:420px;
+	left:650px;
+}
+.login_form{
+	padding:21px 0 0 100px;/*琛ㄥ崟浣嶇疆*/
+}
+.login_button input{
+	width: 65px;/*鎸夐挳瀹藉害*/
+	height: 28px;/*鎸夐挳楂樺害*/
+	background-image: url(../images/click.gif);
+	background-color:transparent;
+	border:0;
+	cursor:pointer;
+	cursor:hand;
+}
+.login_user input{
+	border:0;
+	background-image: url(../images/login_inputBg.jpg);
+	background-repeat:  repeat-x;
+	width:110px;/*鐢ㄦ埛鍚嶆瀹藉害*/
+	height:18px;
+	line-height:18px;
+}
+.login_pass input{
+	border:0;/*瀵嗙爜妗嗚竟妗嗚壊*/
+	background-image: url(../images/login_inputBg.jpg);
+	background-repeat:  repeat-x;
+	width:110px;
+	height:18px;
+	line-height:18px;
+}
+.login_button_left{
+	position:absolute;
+	left:447px;/*鎻愪氦鎸夐挳x鍧愭爣*/
+	top:372px;/*鎻愪氦鎸夐挳y鍧愭爣*/
+}
+.login_button_right{
+	position:absolute;
+	left:530px;/*閲嶇疆鎸夐挳x鍧愭爣*/
+	top:372px;/*閲嶇疆鎸夐挳y鍧愭爣*/
+}
+
+.login_copyright{
+	color:#ffffff;/*鐗堟潈澹版槑鏂囧瓧棰滆壊*/
+	text-align:center;
+	padding:35px  0 0 20px;/*鐗堟潈澹版槑浣嶇疆*/
+}
+.register
+{
+	position:absolute;
+	left:610px;/*閲嶇疆鎸夐挳x鍧愭爣*/
+	top:385px;/*閲嶇疆鎸夐挳y鍧愭爣*/
+}
+.login_info{
+	color:red;
+	position:absolute;
+	left:540px;/*鎻愮ず淇℃伅x鍧愭爣*/
+	top:415px;/*鎻愮ず淇℃伅y鍧愭爣*/
+	line-height:150%;
+	width:240px;
+	overflow:hidden;
+}
+.login_info2{
+	color:red;
+	position:absolute;
+	left:540px;/*鎻愮ず淇℃伅x鍧愭爣*/
+	top:440px;/*鎻愮ず淇℃伅y鍧愭爣*/
+	line-height:150%;
+	width:240px;
+	overflow:hidden;
+}
+.login_skin{
+	position:absolute;
+	right:10px;
+	bottom:10px;
+	color:#ffffff;/*鐨偆绠＄悊鏂囧瓧棰滆壊*/
+	height:30px;
+	line-height:30px;
+}
+.login_skin span{
+	cursor:pointer;
+	cursor:hand;
+}
+.title_text
+{
+	margin:0 auto;
+	width:200px;
+	height:50px;
+	font-size:18pt;
+	color:#ffffff;
+	font-family:"寰蒋闆呴粦";
+	margin-top:100px;
+}
+.register_form
+{
+	margin:0 auto;
+	width:600px;
+}
+.register_form ul
+{
+	list-style:none;
+}
+.register_form span
+{
+	float:left;
+	font-size:14pt;
+	color:#ffffff;
+	font-family:"寰蒋闆呴粦";
+}
+.register_form input
+{
+	margin:0 auto;
+	margin-top:20px;
+}

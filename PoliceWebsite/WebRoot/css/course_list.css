@@ -1,0 +1,79 @@
+@CHARSET "UTF-8";
+body{
+	background:#F1FDFE;
+}
+#content{
+	margin:0 auto;
+	padding-top:10px;
+}
+table{
+	text-align:center;
+	border:solid 2px #95B8E7;
+	font-family:"微软雅黑";
+}
+td{
+	border:solid 1px #EAEAEA;
+}
+#title_head{
+	font-family:"微软雅黑";
+	font-weight:bold;
+}
+.align_left{
+	text-align:left;
+	padding-left:25px;
+}
+#course_id{
+	font-weight:bold;
+	padding-bottom:12px;
+	padding-left:15px;
+}
+a:link{
+	text-decoration:none;
+}
+/* 分页部分 */
+#page_info{
+text-align: center;
+}
+#page_info span{
+margin-right:4px;
+}
+#page_info span a{
+display: inline-block;
+border:solid 1px #fff;
+text-decoration: none;
+}
+.current a{
+color:red;
+}
+.page
+{
+	width:50%;
+	margin-left:600px;
+	
+}
+select {
+	border: 1px solid #acacac;
+	font-size: 1em;
+	border-radius: 0.5em;
+	-webkit-border-radius: .5em;
+	background: #fff url(../images/arrow.png)
+		no-repeat 99%;
+    
+	background-size: 1em 0.5em;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	line-height: 28px;
+	height: 28px;
+	padding: 0 1.5em 0 .75em;
+	color: #888;
+	-webkit-appearance: listbox;
+	-moz-appearance: listbox;
+	appearance: listbox;
+	width:50%;
+	margin-left:25%;
+	margin-bottom:2%;
+}
+select::-ms-expand {
+	display: none
+}
+/* end */
