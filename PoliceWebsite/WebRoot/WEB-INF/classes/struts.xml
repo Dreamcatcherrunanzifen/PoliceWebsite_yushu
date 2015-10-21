@@ -94,6 +94,7 @@
 		<action name="ImgUpload" class="com.yushu.adminaction.ImgUploadAction"
 			method="imgUpload">
 		</action>
+
 		<action name="getListBytypeId" method="changelist" class="com.yushu.adminaction.articleAction">
 			<result type="json">
 				<param name="root">result</param>
@@ -136,6 +137,45 @@
 			class="com.yushu.action.indexAction">
 			<result name="success">
 				WEB-INF/jsp/index/article_detail.jsp
+
+		<!-- 图片 -->
+		<action name="getaddimgPanel" method="typelist"
+			class="com.yushu.adminaction.imgAction">
+			<result name="success">
+				WEB-INF/jsp/admin/img/add.jsp
+			</result>
+		</action>
+		<action name="addImg" method="add" class="com.yushu.adminaction.imgAction">
+			<result type="redirectAction">getaddimgPanel</result>
+		</action>
+		<action name="listImg" method="list" class="com.yushu.adminaction.imgAction">
+			<result name="success">
+				WEB-INF/jsp/admin/img/list.jsp
+			</result>
+		</action>
+		<!-- 前台配置 -->
+		<!-- 首页 -->
+		<action name="articlelist" method="list"
+			class="com.yushu.action.indexAction">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="imglist" method="imgListGet" class="com.yushu.action.indexAction">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="policeHome" method="home" class="com.yushu.action.indexAction">
+			<result name="success">
+				WEB-INF/jsp/index/home.jsp
+			</result>
+		</action>
+		<action name="articleDetail" method="detail"
+			class="com.yushu.action.indexAction">
+			<result type="json">
+				<param name="root">result</param>
+
 			</result>
 		</action>
 

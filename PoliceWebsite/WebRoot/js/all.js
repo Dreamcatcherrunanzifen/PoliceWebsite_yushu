@@ -39,4 +39,157 @@
 		};
 	}]);
 	
+
 }(angular,jQuery));
+
+}(angular,jQuery));
+/**
+ * 
+ */
+(function(angular){
+	angular.module('sysYushuApp.aboutYushuModule',[])
+	.controller('aboutYushuCtrl',['$scope','$window','$http',function($scope,$window,$http){
+
+	}]);
+}(angular));
+/**
+ * 
+ */
+(function(angular){
+	angular.module('sysYushuApp.homeModule',[])
+	.controller('homeCtrl',['$scope','$window','$http',function($scope,$window,$http){
+		$scope.curTime=new Date();
+		$scope.week=$scope.curTime.getDay();
+		$scope.slides=[
+		              {imgurl:'/PoliceWebsite/images/web/test_pic1.jpg'},
+		              {imgurl:'/PoliceWebsite/images/web/test_pic2.jpg'},
+		              {imgurl:'/PoliceWebsite/images/web/test_pic3.jpg'}];
+	}]);
+}(angular));
+/**
+ * 
+ */
+(function(angular){
+	angular.module('sysYushuApp.infoPublicModule',[])
+	.controller('infoPublicCtrl',['$scope','$window','$http',function($scope,$window,$http){
+
+	}]);
+}(angular));
+/**
+ * 
+ */
+(function(angular){
+	angular.module('sysYushuApp.instituSettingModule',[])
+	.controller('instituSettingCtrl',['$scope','$window','$http',function($scope,$window,$http){
+
+	}]);
+}(angular));
+/**
+ * 
+ */
+(function(angular){
+	angular.module('sysYushuApp.liveMessageCtrlModule',[])
+	.controller('liveMessageCtrl',['$scope','$window','$http',function($scope,$window,$http){
+
+	}]);
+}(angular));
+/**
+ * 
+ */
+(function(angular){
+	angular.module('sysYushuApp.manageModule',[])
+	.controller('manageCtrl',['$scope','$window','$http',function($scope,$window,$http){
+
+	}]);
+}(angular));
+/**
+ * 
+ */
+(function(angular){
+	angular.module('sysYushuApp.policeDyModule',[])
+	.controller('policeDyCtrl',['$scope','$window','$http',function($scope,$window,$http){
+
+	}]);
+}(angular));
+/**
+ * 
+ */
+(function(angular){
+	angular.module('sysYushuApp.satisfactionModule',[])
+	.controller('satisfactionCtrl',['$scope','$window','$http',function($scope,$window,$http){
+
+	}]);
+}(angular));
+/**
+ * 
+ */
+(function(angular){
+	angular.module('sysYushuApp.imagesList',[])
+	.directive('imagesList',['$http',function($http){
+		return {
+			restrict:"E",
+			replace:true,
+			scope:{},
+			templateUrl:"/PoliceWebsite/templates/imagesList.html",
+			link:function(scope,elem,attr){
+				$http.get('imglist').success(function(data){
+					scope.imgList=eval('('+data+')');
+				});
+			}
+		};
+	}]);
+}(angular));
+/**
+ * 
+ */
+(function(angular){
+	angular.module('sysYushuApp.moduleList',[])
+	.directive('moduleList',['$http',function($http){
+		return {
+			restrict:"E",
+			replace:true,
+			scope:{
+				tplType:'@',
+				articleType:'='
+			},
+			templateUrl:"/PoliceWebsite/templates/moduleList.html",
+			link:function(scope,elem,attr){
+				$http.get('articlelist?articletype='+scope.articleType).success(function(data){
+					scope.data=eval('('+data+')');
+					console.log(scope.data.date);
+				});
+			}
+		};
+	}]);
+}(angular));
+/**
+ * 
+ */
+(function(angular){
+	angular.module('sysYushuApp.sinaWechat',[])
+	.directive('sinaWechat',['$http',function($http){
+		return {
+			restrict:"E",
+			replace:true,
+			scope:{},
+			templateUrl:"/PoliceWebsite/templates/sina_wechat_tpl.html",
+			link:function(scope,elem,attr){
+			}
+		};
+	}]);
+}(angular));
+/**
+ * 
+ */
+(function(angular){
+	angular.module('sysYushuApp.commonFilter',[])
+	.filter('date2CnWeek', [function(formatDate){
+            return function(input){
+                var _dayArr = ['周日','周一','周二','周三','周四','周五', '周六'];
+
+                return _dayArr[input];
+            };
+        }]);
+	 
+ }(angular));
+

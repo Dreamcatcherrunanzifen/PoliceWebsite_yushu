@@ -31,6 +31,7 @@ public class ImgUploadAction extends ActionSupport {
 
 	public String imgUpload() {
 		//获取response、request对象
+
 		
 		ActionContext ac = ActionContext.getContext();
 		HttpServletResponse response = (HttpServletResponse) ac.get(ServletActionContext.HTTP_RESPONSE);
@@ -64,6 +65,39 @@ public class ImgUploadAction extends ActionSupport {
 		if (!ServletFileUpload.isMultipartContent(request)) {
 			out.println(getError("请选择文件。"));
 			System.out.println("1**34");
+
+		ActionContext ac = ActionContext.getContext();
+		HttpServletResponse response = (HttpServletResponse) ac.get(ServletActionContext.HTTP_RESPONSE);
+		HttpServletRequest request = (HttpServletRequest) ac.get(ServletActionContext.HTTP_REQUEST);
+
+		PrintWriter out = null; //输出流
+		try {
+			out = response.getWriter();
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+
+		String savePath = ServletActionContext.getServletContext().getRealPath("/") + "attached/";
+
+		// 文件保存目录URL
+		String saveUrl = request.getContextPath() + "/attached/";
+      
+		// 定义允许上传的文件扩展名
+		HashMap<String, String> extMap = new HashMap<String, String>();
+		extMap.put("image", "gif,jpg,jpeg,png,bmp");
+		extMap.put("flash", "swf,flv");
+		extMap.put("media", "swf,flv,mp3,wav,wma,wmv,mid,avi,mpg,asf,rm,rmvb");
+		extMap.put("file", "doc,docx,xls,xlsx,ppt,htm,html,txt,zip,rar,gz,bz2");
+
+		// 最大文件大小
+		long maxSize = 10000000;
+
+		response.setContentType("text/html; charset=UTF-8");
+
+		if (!ServletFileUpload.isMultipartContent(request)) {
+			out.println(getError("请选择文件。"));
+			System.out.println("1**");
+
 			return null;
 		}
 		// 检查目录

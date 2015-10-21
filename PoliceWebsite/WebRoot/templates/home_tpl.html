@@ -1,0 +1,68 @@
+<div class='g-main'>
+	<div class="m-otherInfo">
+		<span class="span wel">玉树藏族自治州公安局欢迎您</span> <span class="span">今天是：{{curTime|date:'yyyy-MM-dd'}}&nbsp;{{week
+			| date2CnWeek}}</span>
+		<div class="u-search">
+			<span class="span">站内搜索:</span> <input type="text" class="input"
+				placeholder="输入搜索关键字" />
+			<button class="btn">搜索</button>
+		</div>
+	</div>
+	<div class="m-newsSlide">
+		<ul class='slideWrap' rn-carousel rn-carousel-auto-slide
+			rn-carousel-index="carousel1">
+			<li class='slideitem' ng-repeat='item in slides'><img
+				ng-src='{{item.imgurl}}' /></li>
+		</ul>
+		<div class='slideIndicators' rn-carousel-indicators
+			ng-if="slides.length > 1" slides="slides"
+			rn-carousel-index="carousel1"></div>
+		<p class="slideTitle">玉树公安局开展整治工作</p>
+	</div>
+	<module-list tpl-type="1" article-type="1"></module-list>
+	<module-list tpl-type="2" article-type="8"></module-list>
+	<module-list tpl-type="1" article-type="2"></module-list>
+	<module-list tpl-type="1" article-type="3"></module-list>
+	<div class="m-newsSlide m-newsSlide-1">
+		<ul class='slideWrap' rn-carousel rn-carousel-auto-slide
+			rn-carousel-index="carousel1">
+			<li class='slideitem' ng-repeat='item in slides'><img
+				ng-src='{{item.imgurl}}' /></li>
+		</ul>
+		<div class='slideIndicators' rn-carousel-indicators
+			ng-if="slides.length > 1" slides="slides"
+			rn-carousel-index="carousel1"></div>
+	</div>
+	<module-list tpl-type="1" article-type="4"></module-list>
+	<module-list tpl-type="1" article-type="5"></module-list>
+	<sina-wechat></sina-wechat>
+	<module-list tpl-type="1" article-type="6"></module-list>
+	<module-list tpl-type="1" article-type="7"></module-list>
+	<images-list></images-list>
+	<div class="m-module m-module-4 f-fl">
+		<div class="header">便民服务</div>
+		<ul class="itemWrap">
+			<li class="hrefItem">天气预报</li>
+			<li class="hrefItem">天气预报</li>
+			<li class="hrefItem">天气预报</li>
+			<li class="hrefItem">天气预报</li>
+			<li class="hrefItem">天气预报</li>
+			<li class="hrefItem">天气预报</li>
+			<li class="hrefItem">天气预报</li>
+			<li class="hrefItem">天气预报</li>
+			<li class="hrefItem">天气预报</li>
+			<li class="hrefItem">天气预报</li>
+		</ul>
+	</div>
+	<div class="m-module m-module-4 f-fr">
+		<div class="header">友情链接</div>
+		<ul class="itemWrap">
+			<li class="hrefItem hrefItem-2">玉树自治州政府网站</li>
+			<li class="hrefItem hrefItem-2">玉树自治州政府网站</li>
+			<li class="hrefItem hrefItem-2">玉树自治州政府网站</li>
+			<li class="hrefItem hrefItem-2">玉树自治州政府网站</li>
+			<li class="hrefItem hrefItem-2">玉树自治州政府网站</li>
+			<li class="hrefItem hrefItem-2">玉树自治州政府网站</li>
+		</ul>
+	</div>
+</div>

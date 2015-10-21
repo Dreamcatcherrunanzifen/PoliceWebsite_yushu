@@ -1,0 +1,20 @@
+
+<div class="g-main">
+	<div class="m-artiDetail">
+		<div class='nav'>
+			<span>您的当前位置：</span> <a href="">首页</a>> <a href="">{{article.articleTypeName}}</a> > <a
+				href="" class="curr">文章详情</a>
+		</div>
+		<div class="detail">
+			<p class="title">{{article.articleTitle}}</p>
+			<p class="time">来源：{{article.articleFrom}}
+				发布时间：{{article.addDate}} 阅读次数：{{article.articleClick}}</p>
+			<div class="content">{{article.articleTitle}}</div>
+
+			<div class="preNext">
+				<p class="title f-fl">上一篇：{{article.articleBefore}}</p>
+				<p class="title f-fr">下一篇：{{article.articleAfter}}</p>
+			</div>
+		</div>
+	</div>
+</div>
